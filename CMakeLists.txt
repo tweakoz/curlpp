@@ -72,6 +72,7 @@ message(STATUS "Looking for CURL")
 find_package(CURL REQUIRED)
 
 if(CURL_FOUND)
+  set(CURL_LIBRARIES CURL::libcurl)
   message(STATUS "Found CURL version: ${CURL_VERSION_STRING}")
   message(STATUS "Using CURL include dir(s): ${CURL_INCLUDE_DIRS}")
   message(STATUS "Using CURL lib(s): ${CURL_LIBRARIES}")
